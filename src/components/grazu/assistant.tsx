@@ -91,7 +91,7 @@ export function ContextPanel() {
   ];
   return (
     <div className="space-y-4 text-xs">
-      <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">Konteks Akun Demo</p>
+      <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">Konteks Akun</p>
       <div><label htmlFor="ctx-product" className="mb-1.5 block text-muted-foreground">Produk AI terpilih</label><ProductSwitcher id="ctx-product" /></div>
       <dl className="space-y-3">
         {rows.map(([k, v]) => <div key={k}><dt className="text-muted-foreground">{k}</dt><dd className="mt-0.5 font-medium">{v}</dd></div>)}
@@ -212,7 +212,6 @@ export function ChatArea({ compact = false }: { compact?: boolean }) {
           />
           <Button type="submit" size="icon" aria-label="Kirim pesan" disabled={!draft.trim() || busy || closed}><SendHorizonal size={15} /></Button>
         </div>
-        <p className="mx-auto mt-1.5 max-w-3xl text-[10px] text-muted-foreground">{demoLabel}</p>
       </form>
     </div>
   );

@@ -135,7 +135,7 @@ export function UploadDocumentDialog({ open, onOpenChange, productLabel, existin
             </div>;
           })}
         </div>}
-        <p className="text-xs text-muted-foreground">Mode demo — file tidak dikirim ke server dan tidak disimpan permanen.</p>
+        <p className="text-xs text-muted-foreground">File tidak dikirim ke server dan tidak disimpan permanen.</p>
       </div>
       <DialogFooter className="shrink-0 gap-2 border-t px-4 py-3 sm:px-6 sm:space-x-0">
         <Button variant="outline" onClick={() => changeOpen(false)}>Batal</Button>

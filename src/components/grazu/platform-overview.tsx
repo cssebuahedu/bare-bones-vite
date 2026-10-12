@@ -13,9 +13,9 @@ export function PlatformOverview() {
   const { runs } = useRedTeam();
   // Count recorded red-team runs, not test-catalog entries or ordinary build pipelines.
   const statistics = [
-    { label: "Use Case AI Terdaftar", value: products.length, detail: "Seluruh entri registrasi demo" },
+    { label: "Use Case AI Terdaftar", value: products.length, detail: "Jumlah use case AI yang terdaftar" },
     { label: "Organisasi Terdaftar", value: Object.keys(organizations).length, detail: "Termasuk organisasi pengelola" },
-    { label: "Assessment Tercatat", value: initialAssessments.length, detail: "Catatan assessment kepatuhan demo" },
+    { label: "Assessment Tercatat", value: initialAssessments.length, detail: "Jumlah assessment yang telah tercatat" },
     { label: "Pengujian Keamanan", value: runs.length, detail: "Run pengujian AI Red Teaming" },
   ];
   const product = products.find((item) => item.id === initialAssessments[0]?.productId);
@@ -35,15 +35,14 @@ export function PlatformOverview() {
               </ScrollReveal>
             ))}
           </dl>
-          <ScrollReveal as="p" variant="fade" delay={500} className="mt-10 border-t border-statistics-border pt-5 text-sm font-medium text-statistics-accent">Data simulasi — Bukan statistik resmi nasional.</ScrollReveal>
         </div>
       </section>
       <section aria-labelledby="platform-value-heading">
         <div className="mx-auto grid max-w-7xl items-center gap-10 px-6 py-16 lg:grid-cols-2 lg:gap-16 lg:px-12 lg:py-20">
-          <ScrollReveal variant="rise" role="img" aria-label="Pratinjau demo use case dan assessment kepatuhan GRAZU-AI" className="min-w-0 overflow-hidden rounded-lg border bg-background">
+          <ScrollReveal variant="rise" role="img" aria-label="Pratinjau use case dan assessment kepatuhan GRAZU-AI" className="min-w-0 overflow-hidden rounded-lg border bg-background">
             <div className="flex items-center justify-between gap-3 border-b bg-card px-5 py-4">
               <span className="text-sm font-bold">GRAZU<span className="text-primary">-AI</span></span>
-              <span className="text-xs text-muted-foreground">Detail Use Case · Demo</span>
+              <span className="text-xs text-muted-foreground">Detail Use Case</span>
             </div>
             <div className="p-5 sm:p-7">
               <p className="text-xs font-medium text-link">{product?.id ?? "Use Case"}</p>
@@ -68,7 +67,6 @@ export function PlatformOverview() {
                   ))}
                 </div>
               ) : <p className="py-5 text-sm text-muted-foreground">Belum ada assessment terkait.</p>}
-              <p className="mt-5 text-[11px] leading-5 text-muted-foreground">Pratinjau data demo · Bukan sertifikasi kepatuhan.</p>
             </div>
           </ScrollReveal>
           <div className="min-w-0">

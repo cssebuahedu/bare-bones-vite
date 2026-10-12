@@ -82,7 +82,6 @@ function ClientDashboard() {
           </ul>
         </section>
       </div>
-      <p className="mt-6 text-xs text-muted-foreground">Seluruh informasi merupakan data demonstrasi.</p>
     </>
   );
 }
@@ -212,7 +211,7 @@ function AdminDashboard() {
           </table>
         </div>
         <div className="border-t px-5 py-3 text-[10px] text-muted-foreground">
-          Menampilkan 5 use case terbaru · Data demonstrasi
+          Menampilkan 5 use case terbaru
         </div>
       </section>
       <section className="border-y bg-card px-5 py-5">
@@ -249,9 +248,6 @@ function AdminDashboard() {
           ))}
         </div>
       </section>
-      <p className="my-6 text-[11px] text-muted-foreground">
-        Seluruh informasi yang ditampilkan merupakan data demonstrasi, bukan data operasional.
-      </p>
     </>
   );
 }

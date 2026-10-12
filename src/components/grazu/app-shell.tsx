@@ -62,9 +62,9 @@ export function AppShell() {
             <>
               <div className="flex items-center gap-2 text-xs font-medium">
                 <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-                Lingkungan demonstrasi
+                GRAZU-AI
               </div>
-              <p className="mt-1.5 text-[10px] text-muted-foreground">GRAZU-AI · Versi 0.1.0</p>
+              <p className="mt-1.5 text-[10px] text-muted-foreground">Versi 0.1.0</p>
             </>
           )}
         </div>
@@ -112,23 +112,19 @@ export function AppShell() {
             </div>
           </div>
           <div className="flex shrink-0 items-center gap-3 md:gap-5">
-            <div aria-disabled="true" title="Pencarian global belum tersedia dalam mode demo" className="hidden w-48 cursor-not-allowed items-center gap-2 rounded-md border bg-background px-3 py-2 text-xs text-muted-foreground opacity-70 xl:flex">
+            <div aria-disabled="true" title="Pencarian global belum tersedia" className="hidden w-48 cursor-not-allowed items-center gap-2 rounded-md border bg-background px-3 py-2 text-xs text-muted-foreground opacity-70 xl:flex">
               <Search size={14} />
               <span>Pencarian (segera hadir)</span>
             </div>
 
-            <span className="hidden rounded border border-primary/20 bg-accent px-2 py-1 text-[9px] sm:inline font-semibold tracking-wider text-primary">
-              MODE DEMO
-            </span>
             <NotificationCenter />
             <div className="h-7 border-l" />
             <ProfileMenu />
                     </div>
         </header>
-        <div className="flex flex-wrap items-center justify-between gap-2 border-b bg-accent px-4 py-2 md:px-8">
-          <p role="note" className="text-[11px] font-medium text-primary">MODE DEMO — Data, penilaian, dan izin akses merupakan simulasi; bukan pengamanan nyata.</p>
+        <div className="flex flex-wrap items-center justify-end gap-2 border-b bg-accent px-4 py-2 md:px-8">
           <div className="flex items-center gap-2">
-            <label id="demo-role-label" className="text-[11px] font-medium text-primary">Peran demo</label>
+            <label id="demo-role-label" className="text-[11px] font-medium text-primary">Tampilan peran</label>
             <Select value={role} onValueChange={(value) => { if (isDemoRole(value)) setRole(value); }}>
               <SelectTrigger aria-labelledby="demo-role-label" className="h-8 w-[210px] bg-card text-xs"><SelectValue /></SelectTrigger>
               <SelectContent>{demoRoleIds.map((id) => <SelectItem key={id} value={id}>{demoRoles[id].label}</SelectItem>)}</SelectContent>
@@ -138,7 +134,7 @@ export function AppShell() {
         <main className="mx-auto max-w-[1500px] px-4 py-7 md:px-8 md:py-8">
           {can(path) ? <Outlet /> : (
             <section className="space-y-4 border-y py-8">
-              <h1 className="text-xl font-semibold">Akses tidak tersedia untuk peran demo ini</h1>
+              <h1 className="text-xl font-semibold">Akses tidak tersedia untuk peran ini</h1>
               {path.startsWith("/admin") && <p className="text-sm">Halaman administrasi hanya untuk Administrator Utama (simulasi, bukan otorisasi nyata).</p>}
               <p className="text-sm text-muted-foreground">Pilih peran lain atau kembali ke halaman yang tersedia.</p>
               <Button asChild variant="outline"><Link to="/app">Kembali ke Dashboard</Link></Button>

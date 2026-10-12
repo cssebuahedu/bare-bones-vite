@@ -14,7 +14,7 @@ export const acceptedFormats = ["PDF", "DOCX", "TXT"] as const;
 export const maxFileBytes = 20 * 1024 * 1024;
 export const maxDocuments = 5;
 export const documentLimitMessage = "Maksimal 5 dokumen dapat dilampirkan pada satu use case.";
-export const demoUploadNotice = "Dokumen ditambahkan dalam mode demo. File belum diunggah ke server.";
+export const demoUploadNotice = "Dokumen ditambahkan. File tersimpan sementara di perangkat ini.";
 
 export interface DocEvent { status: DocStatus; by: string; date: string; note?: string }
 export interface ProposalDoc {

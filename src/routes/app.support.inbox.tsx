@@ -77,7 +77,7 @@ function SupportInbox() {
     if (!selected) return;
     const ok = assistantActions.assign(selected.id, csId);
     const name = demoCs.find((c) => c.id === csId)?.name;
-    setNotice(ok ? `Percakapan ditugaskan kepada ${name}. Notifikasi demo dikirim.` : `${name} tidak tersedia untuk penugasan baru.`);
+    setNotice(ok ? `Percakapan ditugaskan kepada ${name}. Notifikasi dikirim.` : `${name} tidak tersedia untuk penugasan baru.`);
   };
   const sendCs = () => { if (!selected) return; assistantActions.csSend(selected.id, draft, actingCs); setDraft(""); };
 
@@ -85,9 +85,9 @@ function SupportInbox() {
     <div className="space-y-4">
       <div>
         <h1 className="text-xl font-semibold">Layanan Pelanggan</h1>
-        <p className="text-sm text-muted-foreground">Pantau percakapan AI Bot dan ambil alih bila pengguna membutuhkan bantuan CS. Mode demo — data simulasi.</p>
+        <p className="text-sm text-muted-foreground">Pantau percakapan AI Bot dan ambil alih bila pengguna membutuhkan bantuan CS.</p>
         <label className="mt-3 flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
-          Bertindak sebagai (demo)
+          Bertindak sebagai
           <select className={sel} value={actingCs} onChange={(e) => assistantActions.setActingCs(e.target.value)}>
             {demoCs.map((c) => <option key={c.id} value={c.id}>CS {c.name}</option>)}
           </select>

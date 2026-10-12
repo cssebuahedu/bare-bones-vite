@@ -3,7 +3,7 @@ import { sectors } from "@/lib/use-cases";
 
 // Semua indikator di modul ini adalah SIMULASI untuk demo, bukan statistik resmi.
 
-export const demoNote = "MODE DEMO — Data simulasi, bukan statistik resmi nasional.";
+export const demoNote = "Bukan statistik resmi nasional.";
 
 export const analyticsSectors = sectors.includes("Industri") ? sectors : [...sectors, "Industri"];
 

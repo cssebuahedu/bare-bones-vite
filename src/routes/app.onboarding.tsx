@@ -25,7 +25,7 @@ function Onboarding() {
   const [orgErr, setOrgErr] = useState<Errors<OrgProfile>>({});
 
   if (role !== "client")
-    return <p className="rounded-md border bg-card p-6 text-sm text-muted-foreground">Onboarding hanya tersedia untuk peran Perwakilan Organisasi. Ganti peran demo untuk mencobanya.</p>;
+    return <p className="rounded-md border bg-card p-6 text-sm text-muted-foreground">Onboarding hanya tersedia untuk peran Perwakilan Organisasi. Ganti peran untuk mencobanya.</p>;
 
   const next = () => {
     if (step === 0) { const e = validateAccount(account); setAccErr(e); if (Object.keys(e).length) return; }
@@ -42,7 +42,7 @@ function Onboarding() {
   return (
     <div className="mx-auto max-w-3xl">
       <h1 className="text-2xl font-semibold">Onboarding Klien</h1>
-      <p className="mt-2 text-sm text-muted-foreground">Lengkapi data berikut. Mode demo — data hanya tersimpan sementara.</p>
+      <p className="mt-2 text-sm text-muted-foreground">Lengkapi data berikut. Data hanya tersimpan sementara.</p>
       <ol className="my-6 grid grid-cols-3 gap-2" aria-label="Langkah onboarding">
         {steps.map((label, i) => (
           <li key={label} aria-current={i === step ? "step" : undefined} className={`border-t-2 pt-2 text-xs ${i <= step ? "border-primary font-medium text-primary" : "border-border text-muted-foreground"}`}>

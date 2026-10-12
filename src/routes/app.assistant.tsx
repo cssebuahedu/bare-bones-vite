@@ -29,7 +29,6 @@ function AssistantPage() {
           <div className="min-w-0">
             <h1 className="text-base font-semibold">GRAZU AI Assistant</h1>
             <p className="mt-0.5 text-xs text-muted-foreground">Asisten konsultasi tata kelola, keamanan, dan regulasi kecerdasan artifisial.</p>
-            <span className="mt-2 inline-block rounded border border-primary/20 bg-accent px-2 py-0.5 text-[10px] font-semibold text-primary">MODE DEMO — Respons chatbot merupakan simulasi.</span>
           </div>
           <div className="flex shrink-0 gap-1">
             <Button variant="ghost" size="icon" className="lg:hidden" aria-label="Riwayat percakapan" onClick={() => setHistory(true)}><History size={17} /></Button>

@@ -116,9 +116,6 @@ export function TestimonialCarousel() {
             </div>
             <Button variant="ghost" size="icon" onClick={next} aria-label="Testimoni berikutnya" title="Testimoni berikutnya" className="rounded-full text-muted-foreground"><ArrowRight aria-hidden="true" /></Button>
           </div>
-          <p className="mt-5 text-center text-xs leading-5 text-muted-foreground">
-            Ilustrasi skenario pengguna — Bukan testimoni pelanggan nyata. Potret merupakan ilustrasi AI.
-          </p>
         </ScrollReveal>
       </div>
     </section>

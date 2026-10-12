@@ -29,7 +29,7 @@ function OrganizationPage() {
       <div className="mb-6 flex flex-wrap items-start justify-between gap-3">
         <div>
           <h1 className="text-2xl font-semibold">{org.name}</h1>
-          <p className="mt-2 text-sm text-muted-foreground">Profil organisasi · data demonstrasi</p>
+          <p className="mt-2 text-sm text-muted-foreground">Profil organisasi</p>
         </div>
         {!editing && <Button variant="outline" onClick={() => { setDraft(current); setErrors({}); setEditing(true); }}>Ubah Profil</Button>}
       </div>
