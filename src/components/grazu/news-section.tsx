@@ -24,7 +24,7 @@ export function EditorialNewsThumbnail({ src, alt, date, dateTime, category }: {
         <div role="img" aria-label={alt} className="h-full w-full bg-gradient-to-br from-primary/30 via-secondary to-accent" />
       )}
       {/* date notch */}
-      <div className="absolute bottom-0 left-0 flex h-10 w-36 items-end rounded-tr-[20px] bg-background pb-1 pr-3 sm:w-40">
+      <div className="absolute bottom-0 left-0 flex h-10 w-36 items-end rounded-tr-[20px] bg-background pb-1 pl-1.5 pr-3 sm:w-40">
         {date && <time dateTime={dateTime} className="whitespace-nowrap text-[13px] font-medium leading-none text-foreground sm:text-sm">{date}</time>}
       </div>
       <span aria-hidden="true" className="notch-corner-l bottom-10 left-0" />
