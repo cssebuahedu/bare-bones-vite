@@ -4,7 +4,7 @@ import { findings, useRepos } from "@/lib/devsecops";
 import { redTests, useRedTeam } from "@/lib/red-teaming";
 import { useUseCases } from "@/lib/use-cases";
 
-export const demoDisclaimer = "MODE DEMO — Hasil penilaian bukan sertifikasi atau keputusan resmi regulator.";
+export const demoDisclaimer = "Hasil penilaian bukan sertifikasi atau keputusan resmi regulator.";
 export const decisionMessage = "Keputusan review disimpan sebagai simulasi. Tidak ada keputusan resmi yang diterbitkan.";
 export const controlStatuses = ["Terpenuhi", "Tidak Terpenuhi", "Perlu Ditinjau", "Belum Diuji", "Tidak Berlaku"] as const;
 export type ControlStatus = (typeof controlStatuses)[number];

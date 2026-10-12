@@ -149,10 +149,10 @@ export const navigationGroups = [
     label: "Administrasi",
     items: [
       { title: "Admin Dashboard", path: "/admin", icon: UserCog, description: "Ringkasan administrasi pengguna dan organisasi platform." },
-      { title: "Manajemen Pengguna", path: "/admin/users", icon: Users, description: "Kelola akun, peran, dan status pengguna demo." },
-      { title: "Peran & Izin", path: "/admin/permissions", icon: KeyRound, description: "Matriks izin akses demo untuk setiap peran." },
-      { title: "Organisasi", path: "/admin/organizations", icon: Building2, description: "Verifikasi dan kelola organisasi demo." },
-      { title: "Audit Administrasi", path: "/admin/audit", icon: ScrollText, description: "Jejak audit tindakan administrasi demo." },
+      { title: "Manajemen Pengguna", path: "/admin/users", icon: Users, description: "Kelola akun, peran, dan status pengguna." },
+      { title: "Peran & Izin", path: "/admin/permissions", icon: KeyRound, description: "Matriks izin akses untuk setiap peran." },
+      { title: "Organisasi", path: "/admin/organizations", icon: Building2, description: "Verifikasi dan kelola organisasi." },
+      { title: "Audit Administrasi", path: "/admin/audit", icon: ScrollText, description: "Jejak audit tindakan administrasi." },
     ],
   },
 ] as const;

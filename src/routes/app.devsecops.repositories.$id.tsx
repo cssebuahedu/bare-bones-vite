@@ -29,7 +29,7 @@ function RepoDetail() {
     return (
       <div className="py-20 text-center">
         <h1 className="text-lg font-semibold">Repository tidak ditemukan</h1>
-        <p className="mt-2 text-sm text-muted-foreground">Repository mungkin telah dihapus dari data demo.</p>
+        <p className="mt-2 text-sm text-muted-foreground">Repository mungkin telah dihapus dari daftar.</p>
         <Button asChild variant="outline" className="mt-5"><Link to="/app/devsecops">Kembali ke AI DevSecOps</Link></Button>
       </div>
     );
@@ -51,7 +51,7 @@ function View({ repo }: { repo: Repository }) {
     <>
       <Link to="/app/devsecops" className="text-xs text-muted-foreground hover:text-primary">← AI DevSecOps</Link>
       <header className="mb-6 mt-3 border-b pb-6">
-        <p className="text-[11px] text-muted-foreground">{repo.id} · Data Simulasi</p>
+        <p className="text-[11px] text-muted-foreground">{repo.id}</p>
         <h1 className="mt-1.5 break-all text-2xl font-semibold">{repo.name}</h1>
         <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs">
           <span><span className="text-muted-foreground">Produk AI: </span>{product ? <Link to="/app/use-cases/$id" params={{ id: product.id }} className="text-primary hover:underline">{product.name}</Link> : repo.productId}</span>

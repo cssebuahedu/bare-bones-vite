@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { MessageCircle, SendHorizonal, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Message, SessionStatusBadge } from "@/components/grazu/assistant";
-import { assistantActions, guestDisclaimer, useAssistant } from "@/lib/assistant";
+import { assistantActions, useAssistant } from "@/lib/assistant";
 
 /** Public guest chat: shows only the visitor's own temporary conversation. */
 export function GuestChat() {
@@ -50,7 +50,6 @@ export function GuestChat() {
             className="max-h-32 min-h-9 flex-1 resize-none bg-transparent px-1.5 py-1.5 text-sm outline-none placeholder:text-muted-foreground" />
           <Button type="submit" size="icon" aria-label="Kirim pesan" disabled={!draft.trim() || busy || closed}><SendHorizonal size={15} /></Button>
         </div>
-        <p className="mt-1.5 text-[10px] text-muted-foreground">{guestDisclaimer}</p>
       </form>
     </section>
   );

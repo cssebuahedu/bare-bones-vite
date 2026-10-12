@@ -103,7 +103,7 @@ function Form({ editing, defaultProduct, onDone }: { editing?: Endpoint | undefi
       </div>
       {f.authType !== "None" && (
         <div>
-          <L t="Kredensial (demo)" htmlFor="ep-cred" />
+          <L t="Kredensial" htmlFor="ep-cred" />
           <Input id="ep-cred" type="password" autoComplete="off" className="mt-1.5"
             placeholder={editing?.hasCredential && editing.authType === f.authType ? "•••••••• (terkonfigurasi, kosongkan untuk tetap)" : credPlaceholder}
             value={credential} onChange={(e) => { setValidated(false); setCredential(e.target.value); }} />
@@ -136,7 +136,7 @@ function Form({ editing, defaultProduct, onDone }: { editing?: Endpoint | undefi
 
       {validated && <p role="status" className="rounded-md border border-primary/30 bg-accent px-3 py-2 text-xs text-primary">Validasi struktur berhasil. Konektivitas endpoint belum diuji.</p>}
       <div className="flex flex-wrap justify-end gap-2 border-t pt-4">
-        <Button type="button" variant="outline" onClick={() => setValidated(check())}>Validasi Konfigurasi (Demo)</Button>
+        <Button type="button" variant="outline" onClick={() => setValidated(check())}>Validasi Konfigurasi</Button>
         <Button type="button" variant="outline" onClick={onDone}>Batal</Button>
         <Button type="submit">{editing ? "Simpan Perubahan" : "Tambah Endpoint"}</Button>
       </div>

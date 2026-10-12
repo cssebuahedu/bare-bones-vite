@@ -94,7 +94,7 @@ export function DocumentsPanel({ product }: { product: UseCase }) {
         <AlertDialogContent>
           <AlertDialogHeader>
             <AlertDialogTitle>Hapus dokumen?</AlertDialogTitle>
-            <AlertDialogDescription>Catatan dokumen "{deleting?.title}" akan dihapus dari data demo.</AlertDialogDescription>
+            <AlertDialogDescription>Catatan dokumen "{deleting?.title}" akan dihapus.</AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
             <AlertDialogCancel>Batal</AlertDialogCancel>
@@ -120,7 +120,7 @@ function DetailDialog({ doc, canReview, actor, onClose }: { doc: ProposalDoc; ca
         <dl className="space-y-2 text-sm">{rows.map(([k, v]) => <div key={k} className="grid grid-cols-3 gap-2"><dt className="text-muted-foreground">{k}</dt><dd className="col-span-2 break-words">{v}</dd></div>)}</dl>
         {doc.previewUrl
           ? <a href={doc.previewUrl} target="_blank" rel="noreferrer" className="text-sm text-primary hover:underline">Pratinjau sementara (sesi ini saja)</a>
-          : <p className="text-xs text-muted-foreground">File contoh tidak tersedia untuk diunduh dalam mode demo.</p>}
+          : <p className="text-xs text-muted-foreground">File contoh tidak tersedia untuk diunduh.</p>}
         <div>
           <h3 className="mb-2 text-xs font-semibold">Riwayat Peninjauan</h3>
           <ol className="space-y-2 border-l pl-4">
@@ -134,7 +134,7 @@ function DetailDialog({ doc, canReview, actor, onClose }: { doc: ProposalDoc; ca
         </div>
         {canReview && (
           <div className="space-y-2 border-t pt-4">
-            <Label htmlFor="rev-status">Perbarui status (simulasi)</Label>
+            <Label htmlFor="rev-status">Perbarui status</Label>
             <select id="rev-status" className={`${selectCls} w-full`} value={next} onChange={(e) => setNext(e.target.value as DocStatus)}>{docStatuses.map((s) => <option key={s}>{s}</option>)}</select>
             <Textarea aria-label="Catatan peninjau" placeholder="Catatan peninjau (opsional)" rows={2} maxLength={500} value={note} onChange={(e) => setNote(e.target.value)} />
             <Button size="sm" disabled={next === doc.status && !note.trim()} onClick={() => { documentActions.setStatus(doc.id, next, actor, note); setNote(""); }}>Simpan Tinjauan</Button>

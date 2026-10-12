@@ -49,7 +49,7 @@ function DevSecOps() {
         <div>
           <h1 className="text-2xl font-semibold">AI DevSecOps</h1>
           <p className="mt-2 max-w-2xl text-sm text-muted-foreground">Pemantauan keamanan repository, workflow CI/CD, dan implementasi sistem kecerdasan artifisial.</p>
-          <span className="mt-3 inline-block rounded border border-primary/20 bg-accent px-2 py-1 text-[10px] font-semibold tracking-wider text-primary">MODE DEMO — Tidak terhubung ke GitHub</span>
+          <span className="mt-3 inline-block rounded border border-primary/20 bg-accent px-2 py-1 text-[10px] font-semibold tracking-wider text-primary">Belum terhubung ke GitHub</span>
         </div>
         <div className="flex flex-wrap gap-2">
           <Button variant="outline" onClick={() => setYaml(true)}>Integrasi GitHub Actions</Button>
@@ -113,7 +113,7 @@ function DevSecOps() {
       <div className="mb-7 grid gap-7 lg:grid-cols-[2fr_3fr]">
         <section className="rounded-md border bg-card p-5">
           <h2 className="text-sm font-semibold">Ringkasan Security Scan</h2>
-          <p className="mt-1 text-[11px] text-muted-foreground">Temuan terbuka per kategori · Data simulasi</p>
+          <p className="mt-1 text-[11px] text-muted-foreground">Temuan terbuka per kategori</p>
           <div className="mt-5 space-y-4">
             {scanCategories.map((c) => {
               const n = activeFindings.filter((f) => f.category === c).length;
@@ -140,7 +140,7 @@ function DevSecOps() {
         <AlertDialogContent>
           <AlertDialogHeader>
             <AlertDialogTitle>Hapus repository?</AlertDialogTitle>
-            <AlertDialogDescription>{del?.name} akan dihapus dari daftar demo lokal.</AlertDialogDescription>
+            <AlertDialogDescription>{del?.name} akan dihapus dari daftar lokal.</AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
             <AlertDialogCancel>Batal</AlertDialogCancel>

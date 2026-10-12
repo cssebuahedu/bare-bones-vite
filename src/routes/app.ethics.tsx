@@ -34,7 +34,6 @@ function EthicsPage() {
           <p className="mt-2 text-sm text-muted-foreground">Evaluasi penerapan sembilan nilai etika kecerdasan artifisial.</p>
           <p className="mt-1 text-[11px] text-muted-foreground">Mengacu pada SE Menkominfo No. 9 Tahun 2023 tentang Etika Kecerdasan Artifisial.</p>
         </div>
-        <span className="status status-warning">Data Simulasi</span>
       </header>
       <ProductSelector value={product} onChange={(id) => navigate({ search: id ? { product: id } : {} })} />
       {uc ? (
@@ -135,7 +134,7 @@ function Checklist({ uc }: { uc: UseCase }) {
       </Accordion>
 
       <div className="flex flex-wrap items-center gap-4">
-        <Button onClick={() => setSaved(new Date().toLocaleTimeString("id-ID", { hour: "2-digit", minute: "2-digit" }))}>Simpan Draft (Demo)</Button>
+        <Button onClick={() => setSaved(new Date().toLocaleTimeString("id-ID", { hour: "2-digit", minute: "2-digit" }))}>Simpan Draft</Button>
         <Button variant="outline" onClick={() => { setAnswers({}); setNotes({}); setSaved(""); }}>Atur ulang</Button>
         {saved && (
           <p role="status" className="text-xs text-primary">
