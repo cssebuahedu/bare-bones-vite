@@ -28,7 +28,7 @@ const newsSource: NewsArticle[] = [
     title: "Penguatan Tata Kelola AI untuk Mendukung Transformasi Digital Indonesia",
     excerpt:
       "Pengembangan tata kelola kecerdasan artifisial menjadi langkah strategis dalam mendorong transformasi digital yang aman, transparan, dan bertanggung jawab.",
-    thumbnailUrl: imgGov, publishedAt: null, status: "published", isDemo: true,
+    thumbnailUrl: imgGov, publishedAt: "2026-10-12", status: "published", isDemo: true,
   },
   {
     id: "N-002",
@@ -37,7 +37,7 @@ const newsSource: NewsArticle[] = [
     title: "Membangun Ekosistem AI yang Aman dan Bertanggung Jawab",
     excerpt:
       "Penguatan keamanan dan manajemen risiko menjadi bagian penting dalam memastikan pemanfaatan teknologi AI yang tepercaya dan berkelanjutan.",
-    thumbnailUrl: imgSec, publishedAt: null, status: "published", isDemo: true,
+    thumbnailUrl: imgSec, publishedAt: "2026-10-09", status: "published", isDemo: true,
   },
   {
     id: "N-003",
@@ -46,7 +46,7 @@ const newsSource: NewsArticle[] = [
     title: "Kolaborasi Pemerintah dan Industri dalam Pengembangan Kecerdasan Artifisial",
     excerpt:
       "Sinergi antara pemerintah, perguruan tinggi, dan sektor industri diharapkan dapat mempercepat pengembangan serta adopsi teknologi AI di Indonesia.",
-    thumbnailUrl: imgCol, publishedAt: null, status: "published", isDemo: true,
+    thumbnailUrl: imgCol, publishedAt: "2026-10-07", status: "published", isDemo: true,
   },
   {
     id: "N-004",
@@ -55,7 +55,7 @@ const newsSource: NewsArticle[] = [
     title: "Perkembangan Adopsi AI di Indonesia: Peluang dan Tantangan",
     excerpt:
       "Pemantauan perkembangan adopsi kecerdasan artifisial menjadi salah satu dasar dalam merumuskan strategi dan kebijakan transformasi digital nasional.",
-    thumbnailUrl: imgAna, publishedAt: null, status: "published", isDemo: true,
+    thumbnailUrl: imgAna, publishedAt: "2026-09-30", status: "published", isDemo: true,
   },
 ];
 
