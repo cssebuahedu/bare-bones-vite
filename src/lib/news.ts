@@ -77,7 +77,13 @@ export function getNewsBySlug(slug: string) {
   return getPublishedNews(Infinity).find((a) => a.slug === slug);
 }
 
-export function formatNewsDate(iso: string | null) {
-  if (!iso || Number.isNaN(Date.parse(iso))) return null;
-  return new Intl.DateTimeFormat("id-ID", { day: "numeric", month: "long", year: "numeric" }).format(new Date(iso));
+/** Indonesian long date in Asia/Jakarta. Date-only values (YYYY-MM-DD) are anchored to Jakarta midnight to avoid off-by-one days. */
+export function formatNewsDate(value: string | Date | null | undefined) {
+  if (!value) return null;
+  const date =
+    typeof value === "string" && /^\d{4}-\d{2}-\d{2}$/.test(value)
+      ? new Date(`${value}T00:00:00+07:00`)
+      : new Date(value);
+  if (Number.isNaN(date.getTime())) return null;
+  return new Intl.DateTimeFormat("id-ID", { day: "numeric", month: "long", year: "numeric", timeZone: "Asia/Jakarta" }).format(date);
 }
