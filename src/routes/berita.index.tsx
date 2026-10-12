@@ -17,7 +17,6 @@ function NewsListPage() {
       <p className="mt-3 max-w-2xl text-sm leading-6 text-muted-foreground">
         Ikuti perkembangan terbaru, agenda, dan informasi seputar tata kelola, keamanan, serta pemanfaatan kecerdasan artifisial di Indonesia.
       </p>
-      <p className="mt-2 text-xs text-muted-foreground">Seluruh artikel di halaman ini merupakan konten demo ilustratif.</p>
       {articles.length === 0 ? (
         <p className="mt-10 text-sm text-muted-foreground">Belum ada berita yang dipublikasikan.</p>
       ) : (

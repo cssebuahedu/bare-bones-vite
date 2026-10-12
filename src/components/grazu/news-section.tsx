@@ -17,7 +17,7 @@ export function NewsThumbnail({ article, className = "" }: { article: NewsArticl
  */
 export function EditorialNewsThumbnail({ src, alt, date, dateTime, category }: { src: string | null; alt: string; date: string | null; dateTime?: string | undefined; category: string }) {
   return (
-    <div className="relative aspect-[16/11] w-full overflow-hidden rounded-[22px] [--notch-fill:var(--background)] [--nr:20px]">
+    <div className="relative aspect-[16/11] w-full overflow-hidden rounded-[22px] rounded-bl-none [--notch-fill:var(--background)] [--nr:20px]">
       {src ? (
         <img src={src} alt={alt} loading="lazy" width={992} height={672} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" />
       ) : (
